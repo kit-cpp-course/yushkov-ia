@@ -8,11 +8,8 @@ namespace wv
 	{
 	public:
 		void Log(int value) const override;
-
 		void Log(const std::string& message) const override;
-
 		void LogLine(const std::string& message) const override;
-
 		OperationLogger LogOperation(const std::string& message) const override;
 	};
 }

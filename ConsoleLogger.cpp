@@ -22,6 +22,6 @@ namespace wv
 	OperationLogger ConsoleLogger::LogOperation(const std::string& message) const
 	{
 		LogLine(message);
-		return OperationLogger(this);
+		return OperationLogger(*this);
 	}
 }

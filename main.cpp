@@ -7,18 +7,13 @@ using namespace wv;
 
 int main()
 {
-	const auto dataProvider = new RandomDataProvider<int>(100, 1, 1000);
-	const auto logger = new ConsoleLogger();
+	const IDataProvider<int> & dataProvider = RandomDataProvider<int>(100, 1, 1000);
+	const ILogger & logger = ConsoleLogger();
 
-	const auto singleThreadSorter = new SingleThreadSorter<int>(logger);
-	const auto multiThreadSorter = new MultiThreadSorter<int>(logger);
+	const ISorterEngine<int> & singleThreadSorter = SingleThreadSorter<int>(&logger);
+	const ISorterEngine<int> & multiThreadSorter = MultiThreadSorter<int>(&logger);
 
-	multiThreadSorter->Sort(*dataProvider);
-	logger->LogLine("");
-	singleThreadSorter->Sort(*dataProvider);
-
-	delete dataProvider;
-	delete logger;
-	delete singleThreadSorter;
-	delete multiThreadSorter;
+	multiThreadSorter.Sort(dataProvider);
+	logger.LogLine("");
+	singleThreadSorter.Sort(dataProvider);
 }
