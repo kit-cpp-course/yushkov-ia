@@ -6,7 +6,7 @@
 namespace wv
 {
 	/*
-	 * Алгоритм параллельного алгоритма Quicksort
+	 * РђР»РіРѕСЂРёС‚Рј РїР°СЂР°Р»Р»РµР»СЊРЅРѕРіРѕ Р°Р»РіРѕСЂРёС‚РјР° Quicksort
 	 */
 	template<typename T>
 	class ParallelQuickSorter

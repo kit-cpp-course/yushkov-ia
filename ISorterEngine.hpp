@@ -8,7 +8,7 @@
 namespace wv
 {
 	/*
-	 * Предоставляет пользователю интерфейс для сортировки данных
+	 * РџСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ РёРЅС‚РµСЂС„РµР№СЃ РґР»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё РґР°РЅРЅС‹С…
 	 */
 	template<typename T>
 	class ISorterEngine
@@ -17,7 +17,7 @@ namespace wv
 		virtual ~ISorterEngine() = default;
 
 		/*
-		 * Осуществляет сортировку данных, предоставляемых IDataProvider 
+		 * РћСЃСѓС‰РµСЃС‚РІР»СЏРµС‚ СЃРѕСЂС‚РёСЂРѕРІРєСѓ РґР°РЅРЅС‹С…, РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµРјС‹С… IDataProvider 
 		 */
 		virtual void Sort(const IDataProvider<T>& provider) const = 0;
 	};

@@ -6,7 +6,7 @@ namespace wv
 	class OperationLogger;
 
 	/*
-	 * Интерфейс для логирования действий
+	 * РРЅС‚РµСЂС„РµР№СЃ РґР»СЏ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ РґРµР№СЃС‚РІРёР№
 	 */
 	class ILogger
 	{
@@ -14,22 +14,22 @@ namespace wv
 		virtual ~ILogger() = default;
 
 		/*
-		 * Записывает строку в лог
+		 * Р—Р°РїРёСЃС‹РІР°РµС‚ СЃС‚СЂРѕРєСѓ РІ Р»РѕРі
 		 */
 		virtual void Log(const std::string& message) const = 0;
 
 		/*
-		 * Записывает строку в лог, добавляя в конец символ конца строки
+		 * Р—Р°РїРёСЃС‹РІР°РµС‚ СЃС‚СЂРѕРєСѓ РІ Р»РѕРі, РґРѕР±Р°РІР»СЏСЏ РІ РєРѕРЅРµС† СЃРёРјРІРѕР» РєРѕРЅС†Р° СЃС‚СЂРѕРєРё
 		 */
 		virtual void LogLine(const std::string& message) const = 0;
 
 		/*
-		 * Записывает целое число в лог
+		 * Р—Р°РїРёСЃС‹РІР°РµС‚ С†РµР»РѕРµ С‡РёСЃР»Рѕ РІ Р»РѕРі
 		 */
 		virtual void Log(int value) const = 0;
 
 		/*
-		 * Логирует длительность операции
+		 * Р›РѕРіРёСЂСѓРµС‚ РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕРїРµСЂР°С†РёРё
 		 */
 		virtual OperationLogger LogOperation(const std::string& message) const = 0;
 	};
